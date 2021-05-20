@@ -1,0 +1,85 @@
+@keyframes animateLoadTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animationTop {
+    animation: .5s ease-out 0s 1 animateLoadTop;
+}
+
+@keyframes animateLoadDown {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animationDown {
+    animation: .5s ease-out 0s 1 animateLoadDown;
+}
+
+@keyframes animateLoadRight {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animationRight {
+    animation: .5s ease-out 0s 1 animateLoadRight;
+}
+
+@keyframes animateLoadLeft {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animationLeft {
+    animation: 1s ease-out 0s 1 animateLoadLeft;
+}
+
+@keyframes slideToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
+@keyframes slideToRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+.slideToLeft {
+    animation: .9s ease 0s 1 slideToLeft;
+}
+
+.slideToRight {
+    animation: .9s ease 0s 1 slideToRight;
+}
+
+.slideFromRight {
+    animation: .9s ease 0s 1 animateLoadRight;
+}
+
+.slideFromLeft {
+    animation: .9s ease 0s 1 animateLoadLeft;
+}

@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.menu_content {
+    position: fixed;
+    top: 0.5%;
+    left: 17%;
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+    background-color: #E22B12;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+#main_navigation {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#main_navigation > h1 {
+    position: relative;
+    display: none;
+    color: white;
+    height: auto;
+    width: auto;
+    bottom: 3px;
+    left: 15px;
+}
+
+.menu_list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.menu_list > li {
+    display:flex;
+    justify-content: center;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 100%;
+}
+
+.nav_button {
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color:white;
+    background: none;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid transparent;
+    height: 100%;
+    width: 100%;
+}
+
+button:hover {
+    cursor:pointer;
+    border-color: black;
+    transition: border-color ease 0.2s, color ease-out 0.2s;
+    color: black;
+}
+
+#toggle_button {
+    position: absolute;
+    display: none;
+    top: 3px;
+    left: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 21px;
+    background-color: #E22B12;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media all and (max-width: 1100px) {
+    .menu_content {
+        position: fixed;
+        border-radius: 0;   
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+    }
+
+    #main_navigation {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #main_navigation > h1 {
+        display: flex;
+    }
+
+    .menu_list {
+        flex-direction: column;
+        display: none;
+    }
+
+    .menu_list.active {
+        display: flex;
+    }
+
+    .menu_list > li {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .nav_button {
+        display: flex;
+        justify-content: center;
+    }
+    #pizzeria_menu_button {
+        display: flex; 
+    }
+    #contact_button {
+        display: flex; 
+    }
+    #toggle_button {
+        display: flex;
+    }
+}
+
+
+
