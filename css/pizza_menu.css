@@ -1,6 +1,6 @@
 .pizza_menu_wrap {
     position: relative;
-    height: 700px;
+    height: 730px;
     width: 100%;
     background: #4C1C00;
     border-bottom: 3px solid red;
@@ -48,7 +48,7 @@
 /* 97% for pizza, 40% for fast-food */
 .sauces {
     position: absolute;
-    top: 97%; 
+    bottom: 3%; 
     color: #F44708;
     width: auto;
     height: auto;
@@ -168,6 +168,10 @@ to {opacity: 100%;}
 }
 
 @media all and (max-width: 1100px) {
+    #pizza_menu {
+        height: 80%;
+    }
+
     #pizza_menu_table {
         overflow: scroll;
         display: block;
