@@ -172,6 +172,10 @@ to {opacity: 100%;}
         height: 80%;
     }
 
+    #sauces {
+        bottom: 2%;
+    }
+
     #pizza_menu_table {
         overflow: scroll;
         display: block;
