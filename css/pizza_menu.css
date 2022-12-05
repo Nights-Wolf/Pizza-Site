@@ -1,0 +1,177 @@
+.pizza_menu_wrap {
+    position: relative;
+    height: 700px;
+    width: 100%;
+    background: #4C1C00;
+    border-bottom: 3px solid red;
+}
+
+.pizza_menu_navigation_wrap {
+    position: relative;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.menu_nav_button {
+    width: auto;
+    height: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    background: none;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: chocolate;
+    box-shadow: 3px 3px black;
+    color: black;
+}
+
+#pizza_menu_show {
+    transform: translateY(2px);
+    box-shadow: 0 0 black;
+}
+
+#pizza_menu {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: inline;
+}
+/* 97% for pizza, 40% for fast-food */
+.sauces {
+    position: absolute;
+    top: 97%; 
+    color: #F44708;
+    width: auto;
+    height: auto;
+    text-align: left;
+    margin-left: 1%;
+    display: block;
+}
+
+.sauces > span {
+    color: wheat;
+    text-transform: lowercase;
+    font-weight: lighter;
+}
+
+#pizza_menu_table {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    counter-reset: rowNumber;
+}
+
+.pizza_menu_table_header {
+    display: table-header-group;
+    background-color: chocolate;
+    text-transform: uppercase;
+    height: auto;
+    width: auto;
+}
+
+[data-pizza], [data-fastfood], [data-drink] {
+    color: #F44708;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+}
+
+[data-pizza]::before {
+    display: table-cell;
+    counter-increment: rowNumber;
+    content: counter(rowNumber) ".";
+    text-align: right;
+    padding-top: .7%;
+}
+
+#fast-food_menu {
+    position: relative;
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: none;
+}
+
+#fast-food_menu_table {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: table;   
+    counter-reset: rowNumber;
+}
+
+[data-fastfood]::before {
+    display: table-cell;
+    counter-increment: rowNumber;
+    content: counter(rowNumber) ".";
+    text-align: right;
+}
+
+#drinks_menu {
+    position: relative;
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: none;
+}
+
+#drinks_menu_table {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: table;   
+    counter-reset: rowNumber;
+}
+
+[data-drink]::before {
+    display: table-cell;
+    counter-increment: rowNumber;
+    content: counter(rowNumber) ".";
+    text-align: right;
+}
+
+.ingredients {
+    color: wheat;
+    text-transform: lowercase;
+}
+
+.currency {
+    text-transform: lowercase;
+}
+
+.liter {
+    text-transform: lowercase;
+    color:wheat;
+}
+
+
+.fade {
+animation: 0.5s ease-out 0s 1 fade;
+}
+
+@keyframes fade {
+from {opacity: 0} 
+to {opacity: 100%;}
+}
+
+@media all and (max-width: 1100px) {
+    #pizza_menu_table {
+        overflow: scroll;
+        display: block;
+        height: 100%;
+    }
+  
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dawid Całkowski">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="pizza Gdańsk, pizza delivery Gdańsk, delivery Gdańsk, pizzeria Gdańsk, dowóz pizzy, jedzenie na wynos, takeaway Gdańsk, takeaway food Gdańsk, ">
+    <title>Welcome to John Doe's Pizzeria!</title>
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="icon" href="images/logo.jpeg">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/discounts.css">
+    <link rel="stylesheet" href="css/pizza_menu.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script defer src="https://kit.fontawesome.com/c26cdc87e3.js" crossorigin="anonymous"></script>
+    <script defer src="js/page_nav_menu.js"></script>
+    <script defer src="js/animation.js"></script>
+    <script defer src="js/pizza_menu_nav.js"></script>
+    <script defer src="js/gallery_scroll.js"></script>  
+    <script src="js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFqJpIHr16K2BHLq7Kjgidy1PJRygXiNk&callback=initMap"></script>
+</head>
+<body>
+    <!-- navigation -->
+    <div id="menu_content" class="menu_content">
+        <nav id="main_navigation">
+            <button id="toggle_button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <h1>John Doe's Pizzeria</h1>
+            <ul id="menu_list" class="menu_list">
+                <li><button id="main_button" class="nav_button">Main</button></li>
+                <li><button id="discounts_button" class="nav_button">Discounts</button></li>
+                <li><button id="pizzeria_menu_button" class="nav_button">Menu</button></li>   
+                <li><button id="gallery_button" class="nav_button">Gallery</button></li>
+                <li><button id="contact_button" class="nav_button">Contact</button></li>
+            </ul>
+        </nav>    
+    </div>
+   <!-- main -->
+   <div id="main_image_wrap" class="main_image_wrap">
+    <img id="main_image" src="images/main.jpeg" alt="pizza in background">
+    <div id="welcome_heading_wrap" class="welcome_heading_wrap">
+    <h1 id="welcome_header">Welcome to John Doe's Pizzeria!</h1>
+    <dl id="about">
+        <dt class="about_Header">XXX-XXX-XXX</dt>
+        <dd class="about_Parag">Hungry? Call Us now!</dd>
+        <br>
+        <dt class="about_Header">About Us</dt>
+        <dd class="about_Parag">We are a leading Italian pizza makers in Gdańsk! Since 1998 We brought joy to thousands of customers, making Their day taste as good as Our Pizza!</dd>
+        <br>
+        <dt class="about_Header">What makes Us special?</dt>
+        <dd class="about_Parag">We value trust above all, thus in Our's place We use only trusty ingredients, imported right from Italy. In John Doe's Pizzeria it doesn't matter who You are. As long as You will cross Our's threshold You will become Our customer. And what We value as much as trust are customers!</dd>
+        <br>
+        <dt class="about_Header">Localization</dt>
+        <dd class="about_Parag">We are located at Gdańsk's beautiful beach near Jelitkowo district at: <address>ul. XXXXXXXXXXXX<br>XX-XXX Gdańsk<br>Mon-Sat 10:00-22:00</address></dd>
+    </dl>
+   </div>
+   </div>
+   <!-- discounts -->
+    <div id="discounts_wrap" class="discounts_wrap"> 
+        <div class="birthday_discount">
+            <div id="birthday_discount_logo" class="discounts_logos"><i class="fas fa-birthday-cake fa-10x"></i></div>
+            <div id="birthday_discount_header" class="discounts_headers"><h1>25% on YOURS day!</h1></div>
+            <div id="birthday_discount_description" class="discounts_descriptions"><p>Visit Us on Your's birthday and get ANY pizza with 25% discount!</p></div>
+            </div>
+        <div class="sauce_discount">
+            <div id="sauce_discount_logo" class="discounts_logos"><i class="fas fa-mortar-pestle fa-10x"></i></div>
+            <div id="sauce_discount_header" class="discounts_headers"><h1>FREE sauces, You choose!</h1></div>
+            <div id="sauce_discount_description" class="discounts_descriptions"><p>Buy ANY large pizza and get 5 sauces of Your choice for FREE!</p></div>
+        </div>
+        <div class="coffee_discount">
+            <div id="coffee_discount_logo" class="discounts_logos"><i class="fas fa-coffee fa-10x"></i></div>
+            <div id="coffee_discount_header" class="discounts_headers"><h1>Get coffee for FREE!</h1></div>
+            <div id="coffee_discount_description" class="discounts_descriptions"><p>From 10:00am to 13:00pm buy something in Our's place and get black coffee for FREE!</p></div>
+        </div>
+        </div>
+        <!-- menu -->
+    <div id="pizza_menu_wrap" class="pizza_menu_wrap">
+        <div class="pizza_menu_navigation_wrap">
+            <nav class="pizza_menu_navigation">
+                <button id="pizza_menu_show" class="menu_nav_button">Pizza</button>
+                <button id="fast-food_menu_show" class="menu_nav_button">Fast-food</button>
+                <button id="drinks_menu_show" class="menu_nav_button">Drinks</button>
+            </nav>
+        </div>
+        <div id="pizza_menu" class="fade">
+            <table id="pizza_menu_table">
+                <thead class="pizza_menu_table_header">
+                <tr>
+                    <th></th>
+                    <th id="menu_table_header"><h2>PIZZA</h2></th>
+                    <th id="menu_pizza_size_S">SMALL<span>(20cm)</span></th>
+                    <th id="menu_pizza_size_M">MEDIUM<span>(30cm)</span></th>
+                    <th id="menu_pizza_size_L">LARGE<span>(45cm)</span></th>
+                </tr>
+                </thead>
+                <tbody id="pizza_menu_table_body">
+                <tr data-pizza="1">
+                    <td>Margherita <span class="ingredients">sauce, ham, cheese</span></td>
+                    <td>12 <span class="currency">z&#322;</span></td>
+                    <td>25 <span class="currency">z&#322;</span></td>
+                    <td>35 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="2">
+                    <td>Prosciutto e funghi <span class="ingredients">sauce, ham, cheese, mushrooms</span></td>
+                    <td>14 <span class="currency">z&#322;</span></td>
+                    <td>26 <span class="currency">z&#322;</span></td>
+                    <td>37 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="3">
+                    <td>Marinara <span class="ingredients">sauce, tomato, oregano, basil</span></td>
+                    <td>16 <span class="currency">z&#322;</span></td>
+                    <td>27 <span class="currency">z&#322;</span></td>
+                    <td>39 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="4">
+                    <td>Capricciosa <span class="ingredients">sauce, chicken, cheese, onion, broccoli</span></td>
+                    <td>18 <span class="currency">z&#322;</span></td>
+                    <td>28 <span class="currency">z&#322;</span></td>
+                    <td>41 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="5">
+                    <td>Quattro Stagioni <span class="ingredients">sauce, chicken, cheese, black olives, tomato, onion</span></td>
+                    <td>20 <span class="currency">z&#322;</span></td>
+                    <td>29 <span class="currency">z&#322;</span></td>
+                    <td>43 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="6">
+                    <td>Quattro Formaggi <span class="ingredients">sauce, gouda, feta, mozzarella, gorgonzola</span></td>
+                    <td>22 <span class="currency">z&#322;</span></td>
+                    <td>30 <span class="currency">z&#322;</span></td>
+                    <td>45 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="7">
+                    <td>Vegetariana <span class="ingredients">sauce, mozzarella, tomato, paprica, eggplant, zucchini</span></td>
+                    <td>24 <span class="currency">z&#322;</span></td>
+                    <td>31 <span class="currency">z&#322;</span></td>
+                    <td>47 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="8">
+                    <td>Diavola <span class="ingredients">sauce, mushrooms, salami, jalape&#241;o, onion</span></td>
+                    <td>26 <span class="currency">z&#322;</span></td>
+                    <td>32 <span class="currency">z&#322;</span></td>
+                    <td>49 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="9">
+                    <td>Boscaiola <span class="ingredients">sauce, mushrooms, sausage, mozzarella, onion</span></td>
+                    <td>28 <span class="currency">z&#322;</span></td>
+                    <td>33 <span class="currency">z&#322;</span></td>
+                    <td>51 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="10">
+                    <td>Frutti di Mare <span class="ingredients">sauce, tomato, mozzarella, shrimps, clams</span></td>
+                    <td>30 <span class="currency">z&#322;</span></td>
+                    <td>34 <span class="currency">z&#322;</span></td>
+                    <td>53 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="11">
+                    <td>President <span class="ingredients">garlic sauce, cheese, kebab, pickles, onion</span></td>
+                    <td>32 <span class="currency">z&#322;</span></td>
+                    <td>36 <span class="currency">z&#322;</span></td>
+                    <td>55 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="12">
+                    <td>Salerno <span class="ingredients">sauce, mushrooms, ham, salami, tuna</span></td>
+                    <td>32 <span class="currency">z&#322;</span></td>
+                    <td>36 <span class="currency">z&#322;</span></td>
+                    <td>55 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="13">
+                    <td>Picante <span class="ingredients">sauce, cheese, chicken, 3x Peperoni</span></td>
+                    <td>32 <span class="currency">z&#322;</span></td>
+                    <td>36 <span class="currency">z&#322;</span></td>
+                    <td>55 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="14">
+                    <td>Firenze <span class="ingredients">sauce, cheese, mushrooms, paprica, corn, pickels</span></td>
+                    <td>34 <span class="currency">z&#322;</span></td>
+                    <td>38 <span class="currency">z&#322;</span></td>
+                    <td>57 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="15">
+                    <td>Kebab pizza <span class="ingredients">sauce, cheese, kebab, onion, garlic sauce</span></td>
+                    <td>34 <span class="currency">z&#322;</span></td>
+                    <td>38 <span class="currency">z&#322;</span></td>
+                    <td>57 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="16">
+                    <td>Napoli <span class="ingredients">sauce, cheese, salami, tomato, garlic, basil, arugula</span></td>
+                    <td>34 <span class="currency">z&#322;</span></td>
+                    <td>38 <span class="currency">z&#322;</span></td>
+                    <td>57 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="17">
+                    <td>Polacos <span class="ingredients">sauce, cheese, ham, bacon, sausage, pickles, onion, garlic</span></td>
+                    <td>36 <span class="currency">z&#322;</span></td>
+                    <td>40 <span class="currency">z&#322;</span></td>
+                    <td>59 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="18">
+                    <td>Country <span class="ingredients">sauce, cheese, kebab, mushrooms, broccoli</span></td>
+                    <td>36 <span class="currency">z&#322;</span></td>
+                    <td>40 <span class="currency">z&#322;</span></td>
+                    <td>59 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="19">
+                    <td>Mafioso <span class="ingredients">sauce, cheese, corn, chicken, iceberg lettuce, cherry tomato, cucumber, red onion</span></td>
+                    <td>36 <span class="currency">z&#322;</span></td>
+                    <td>40 <span class="currency">z&#322;</span></td>
+                    <td>59 <span class="currency">z&#322;</span></td>
+                </tr>
+                <tr data-pizza="20">
+                    <td>John Doe's Pizza <span class="ingredients">sauce, cheese, chicken, onion, jalape&#241;o, sauce barbecue</span></td>
+                    <td>38 <span class="currency">z&#322;</span></td>
+                    <td>42 <span class="currency">z&#322;</span></td>
+                    <td>61 <span class="currency">z&#322;</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div> 
+        <p class="sauces fade">SAUCES: <span>ketchup, tabasco, barbecue, thousand islands, garlic, mexican, arabian hot sauce</span>
+        </p>
+        <div id="fast-food_menu" class="fast-food_menu">
+            <table id="fast-food_menu_table">
+                <thead class="pizza_menu_table_header">
+                    <tr>
+                        <th></th>
+                        <th><h2>FAST FOOD</h2></th>
+                        <th>PRICE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-fastfood="1">
+                        <td>Small kebab</td>
+                        <td>12 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-fastfood="2">
+                        <td>Large kebab</td>
+                        <td>15 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-fastfood="3">
+                        <td>Belgian fries</td>
+                        <td>8 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-fastfood="4">
+                        <td>Small tortilla</td>
+                        <td>9 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-fastfood="5">
+                        <td>Large tortilla</td>
+                        <td>12 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-fastfood="6">
+                        <td>Hamburger</td>
+                        <td>14 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-fastfood="7">
+                        <td>Cheeseburger</td>
+                        <td>15 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-fastfood="8">
+                        <td>Kapsalon</td>
+                        <td>17 <span class="currency">z&#322;</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        <div id="drinks_menu" class="drinks_menu">
+            <table id="drinks_menu_table">
+                <thead class="pizza_menu_table_header">
+                    <tr>
+                        <th></th>
+                        <th><h2>DRINKS</h2></th>
+                        <th>PRICE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-drink="1">
+                        <td>Fanta <span class="liter">1l</span></td>
+                        <td>5 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-drink="2">
+                        <td>Pepsi <span class="liter">1l</span></td>
+                        <td>5 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-drink="3">
+                        <td>Sprite <span class="liter">1l</span></td>
+                        <td>5 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-drink="4">
+                        <td>Cola <span class="liter">1l</span></td>
+                        <td>5 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-drink="5">
+                        <td>Mirinda <span class="liter">1l</span></td>
+                        <td>5 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-drink="6">
+                        <td>Water <span class="liter">1l</span></td>
+                        <td>3 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-drink="7">
+                        <td>Black coffee <span class="liter">250ml</span></td>
+                        <td>6 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-drink="8">
+                        <td>Cappuccino <span class="liter">250ml</span></td>
+                        <td>8 <span class="currency">z&#322;</span></td>
+                    </tr>
+                    <tr data-drink="9">
+                        <td>Espresso <span class="liter">100ml</span></td>
+                        <td>9 <span class="currency">z&#322;</span></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    </div>
+    <!-- gallery -->
+    <div id="gallery_wrap" class="gallery_wrap">
+        <div id="gallery_header">
+        <h1>Gallery</h1>
+        </div>
+        <div class="image_wrap">
+            <img data-image="1" src="images/gallery_one.jpeg" alt="pizza in oven">
+            <img data-image="2" src="images/gallery_two.jpeg" alt="pizza putting in oven">
+            <img data-image="3" src="images/gallery_three.jpeg" alt="pizza salami">
+            <img data-image="4" src="images/gallery_four.jpeg" alt="fork on pizza">
+        </div>
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+    </div>
+    <!-- contact -->
+    <div id="contact_wrap" class="contact_wrap">
+        <div id="address_wrap">
+            <address>
+                John Doe's Pizzeria<br>
+                ul. XXXXXXXXXXXX<br>
+                XX-XXX Gdańsk<br>
+                <br>
+                Contact:<br>
+                XXX-XXX-XXX<br>
+                <br>
+                E-mail:<br>
+                john.doe@xxxxx.xxx<br>
+                <br>
+                Open:<br>
+                Mon-Sat 10:00-22:00
+            </address>
+        </div>
+        <div id="map"></div>
+    </div>
+    <footer>John Doe's Pizzeria &#124;&#124; Project made by: Dawid Ca&#322;kowski</footer>
+</body>
+</html>
