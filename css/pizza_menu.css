@@ -105,7 +105,6 @@
 
 #fast-food_menu_table {
     position: absolute;
-    height: 100%;
     width: 100%;
     display: table;   
     counter-reset: rowNumber;
@@ -130,7 +129,6 @@
 
 #drinks_menu_table {
     position: absolute;
-    height: 100%;
     width: 100%;
     display: table;   
     counter-reset: rowNumber;
